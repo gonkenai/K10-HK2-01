@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập Tiếng Anh - Practice 1</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; background-color: #f0f2f5; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .quiz-container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2 { text-align: center; color: #1a73e8; }
+        .section-title { background: #e8f0fe; padding: 10px; border-left: 5px solid #1a73e8; font-weight: bold; margin-top: 25px; }
+        .question { margin-bottom: 20px; padding: 15px; border-bottom: 1px solid #eee; }
+        .question-text { font-weight: 600; margin-bottom: 10px; display: block; }
+        .options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .options label { background: #f8f9fa; padding: 10px; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+        .options label:hover { background: #e9ecef; }
+        .options input { margin-right: 10px; }
+        .word-form-input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .passage { background: #fff8e1; padding: 20px; border: 1px solid #ffe082; border-radius: 8px; font-style: italic; margin-bottom: 20px; }
+        #student-info { margin-bottom: 30px; text-align: center; }
+        #student-info input { padding: 10px; width: 250px; border-radius: 6px; border: 1px solid #ccc; }
+        button { display: block; width: 100%; padding: 15px; background: #1a73e8; color: white; border: none; border-radius: 8px; font-size: 18px; cursor: pointer; margin-top: 30px; }
+        button:hover { background: #1557b0; }
+        #result-board { display: none; margin-top: 30px; padding: 20px; border-radius: 8px; background: #e6fffa; border: 2px solid #38a169; }
+        .correct-ans { color: #2f855a; font-weight: bold; margin-top: 5px; font-size: 0.9em; display: none; }
+        .show-ans .correct-ans { display: block; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>PRACTICE TEST 1</h1>
+    
+    <div id="student-info">
+        <label for="studentName"><strong>Họ và tên học sinh:</strong></label><br><br>
+        <input type="text" id="studentName" placeholder="Nhập tên của em...">
+    </div>
+
+    <form id="quizForm">
+        <div class="section-title">I. VOCABULARY AND GRAMMAR</div>
+        
+        <div class="question" data-ans="A">
+            <span class="question-text">Question 1: ___________ is the gradual increase of temperature on the earth's surface due to greenhouse effect.</span>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A. Global warming</label>
+                <label><input type="radio" name="q1" value="B"> B. Climate change</label>
+                <label><input type="radio" name="q1" value="C"> C. Natural habitats</label>
+                <label><input type="radio" name="q1" value="D"> D. Extreme weather</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: A. Global warming</div>
+        </div>
+
+        <div class="question" data-ans="B">
+            <span class="question-text">Question 2: Do you think we are doing enough to ____________ wild animals?</span>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> A. prevent</label>
+                <label><input type="radio" name="q2" value="B"> B. protect</label>
+                <label><input type="radio" name="q2" value="C"> C. promote</label>
+                <label><input type="radio" name="q2" value="D"> D. predict</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: B. protect</div>
+        </div>
+
+        <div class="question" data-ans="B">
+            <span class="question-text">Question 3: Many ________ animals have been saved thanks to community efforts.</span>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> A. dangerous</label>
+                <label><input type="radio" name="q3" value="B"> B. endangered</label>
+                <label><input type="radio" name="q3" value="C"> C. generous</label>
+                <label><input type="radio" name="q3" value="D"> D. natural</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: B. endangered</div>
+        </div>
+
+        <div class="question" data-ans="C">
+            <span class="question-text">Question 4: Ba said he__________ some good marks the semester before.</span>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> A. gets</label>
+                <label><input type="radio" name="q4" value="B"> B. got</label>
+                <label><input type="radio" name="q4" value="C"> C. had gotten</label>
+                <label><input type="radio" name="q4" value="D"> D. have got</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: C. had gotten</div>
+        </div>
+
+        <div class="question" data-ans="D">
+            <span class="question-text">Question 5: They told their parents that they___________ their best to do the test.</span>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> A. try</label>
+                <label><input type="radio" name="q5" value="B"> B. will try</label>
+                <label><input type="radio" name="q5" value="C"> C. are trying</label>
+                <label><input type="radio" name="q5" value="D"> D. would try</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: D. would try</div>
+        </div>
+
+        <div class="question" data-ans="D">
+            <span class="question-text">Question 6: She asked me where I___________ from.</span>
+            <div class="options">
+                <label><input type="radio" name="q6" value="A"> A. come</label>
+                <label><input type="radio" name="q6" value="B"> B. coming</label>
+                <label><input type="radio" name="q6" value="C"> C. to come</label>
+                <label><input type="radio" name="q6" value="D"> D. came</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: D. came</div>
+        </div>
+
+        <div class="question" data-ans="A">
+            <span class="question-text">Question 7: The mother asked her son _______.</span>
+            <div class="options">
+                <label><input type="radio" name="q7" value="A"> A. where he had been</label>
+                <label><input type="radio" name="q7" value="B"> B. whether I had been</label>
+                <label><input type="radio" name="q7" value="C"> C. where has he been</label>
+                <label><input type="radio" name="q7" value="D"> D. where had he been</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: A. where he had been</div>
+        </div>
+
+        <div class="question" data-ans="D">
+            <span class="question-text">Question 8: Martin asked me _______.</span>
+            <div class="options">
+                <label><input type="radio" name="q8" value="A"> A. how is my father</label>
+                <label><input type="radio" name="q8" value="B"> B. how my father is</label>
+                <label><input type="radio" name="q8" value="C"> C. how was my father</label>
+                <label><input type="radio" name="q8" value="D"> D. how my father was</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: D. how my father was</div>
+        </div>
+
+        <div class="section-title">WORD FORM</div>
+
+        <div class="question" data-ans="natural">
+            <span class="question-text">Question 9: Animals should be kept in their ____________ habitats. (NATURE)</span>
+            <input type="text" class="word-form-input" id="wf9" placeholder="Nhập từ loại đúng...">
+            <div class="correct-ans">Đáp án đúng: natural</div>
+        </div>
+
+        <div class="question" data-ans="endangered">
+            <span class="question-text">Question 10: Habitats of ____________ animals are damaged by human activities. (ENDANGER)</span>
+            <input type="text" class="word-form-input" id="wf10" placeholder="Nhập từ loại đúng...">
+            <div class="correct-ans">Đáp án đúng: endangered</div>
+        </div>
+
+        <div class="question" data-ans="loss">
+            <span class="question-text">Question 11: Many endangered animals are at risk of disappearing due to habitat ____________ and illegal hunting. (LOSE)</span>
+            <input type="text" class="word-form-input" id="wf11" placeholder="Nhập từ loại đúng...">
+            <div class="correct-ans">Đáp án đúng: loss</div>
+        </div>
+
+        <div class="question" data-ans="environmental">
+            <span class="question-text">Question 12: The presentation focused on ____________ protection and climate change. (ENVIRONMENT)</span>
+            <input type="text" class="word-form-input" id="wf12" placeholder="Nhập từ loại đúng...">
+            <div class="correct-ans">Đáp án đúng: environmental</div>
+        </div>
+
+        <div class="question" data-ans="illegal">
+            <span class="question-text">Question 13: ____________ hunting can cause pain and suffering to wild animals. (LEGAL)</span>
+            <input type="text" class="word-form-input" id="wf13" placeholder="Nhập từ loại đúng...">
+            <div class="correct-ans">Đáp án đúng: illegal</div>
+        </div>
+
+        <div class="section-title">CLOSEST IN MEANING</div>
+
+        <div class="question" data-ans="A">
+            <span class="question-text">Question 14: My friend said she would <u>take part in</u> a go-green event the following week.</span>
+            <div class="options">
+                <label><input type="radio" name="q14" value="A"> A. participate in</label>
+                <label><input type="radio" name="q14" value="B"> B. look after</label>
+                <label><input type="radio" name="q14" value="C"> C. get on with</label>
+                <label><input type="radio" name="q14" value="D"> D. carry out</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: A. participate in</div>
+        </div>
+
+        <div class="question" data-ans="C">
+            <span class="question-text">Question 15: She wanted to know if <u>giant</u> pandas were still endangered.</span>
+            <div class="options">
+                <label><input type="radio" name="q15" value="A"> A. strong</label>
+                <label><input type="radio" name="q15" value="B"> B. much</label>
+                <label><input type="radio" name="q15" value="C"> C. large</label>
+                <label><input type="radio" name="q15" value="D"> D. flooded</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: C. large</div>
+        </div>
+
+        <div class="section-title">II. READING</div>
+        <div class="passage">
+            Climate change is one of the most intuitive changes in global warming. As a result of a large amount of carbon dioxide emissions, there is a sharp rise in high-temperature weather, which has an irreversible impact on our environment and ecology...
+        </div>
+
+        <div class="question" data-ans="B">
+            <span class="question-text">Question 16: What could be the best title for the passage?</span>
+            <div class="options">
+                <label><input type="radio" name="q16" value="A"> A. The Protection of Ozone Layer</label>
+                <label><input type="radio" name="q16" value="B"> B. Climate Change and Global Warming</label>
+                <label><input type="radio" name="q16" value="C"> C. The History of Ozone Development</label>
+                <label><input type="radio" name="q16" value="D"> D. The Destruction of Habitat</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: B</div>
+        </div>
+
+        <div class="question" data-ans="B">
+            <span class="question-text">Question 17: The word “which” in paragraph 1 refers to _______.</span>
+            <div class="options">
+                <label><input type="radio" name="q17" value="A"> A. a wave of severe pollution</label>
+                <label><input type="radio" name="q17" value="B"> B. a sharp rise in high-temperature weather</label>
+                <label><input type="radio" name="q17" value="C"> C. a large amount of carbon dioxide</label>
+                <label><input type="radio" name="q17" value="D"> D. organism</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: B</div>
+        </div>
+
+        <div class="question" data-ans="C">
+            <span class="question-text">Question 18: The word “reverse” in paragraph 2 is closest in meaning to _______.</span>
+            <div class="options">
+                <label><input type="radio" name="q18" value="A"> A. turn right</label>
+                <label><input type="radio" name="q18" value="B"> B. reduce more</label>
+                <label><input type="radio" name="q18" value="C"> C. change to opposite</label>
+                <label><input type="radio" name="q18" value="D"> D. increasing sharply</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: C</div>
+        </div>
+
+        <div class="question" data-ans="B">
+            <span class="question-text">Question 19: According to the passage, impacts of climate change EXCEPT _______</span>
+            <div class="options">
+                <label><input type="radio" name="q19" value="A"> A. exacerbating severe pollution</label>
+                <label><input type="radio" name="q19" value="B"> B. improving the quality of human life</label>
+                <label><input type="radio" name="q19" value="C"> C. threatening human security</label>
+                <label><input type="radio" name="q19" value="D"> D. serious changes in climate</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: B</div>
+        </div>
+
+        <div class="question" data-ans="D">
+            <span class="question-text">Question 20: According to recent studies, millions of premature deaths are caused by _______.</span>
+            <div class="options">
+                <label><input type="radio" name="q20" value="A"> A. living environment</label>
+                <label><input type="radio" name="q20" value="B"> B. active measures</label>
+                <label><input type="radio" name="q20" value="C"> C. rising temperature</label>
+                <label><input type="radio" name="q20" value="D"> D. severe pollution</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: D</div>
+        </div>
+
+        <div class="section-title">ARRANGEMENT</div>
+
+        <div class="question" data-ans="D">
+            <span class="question-text">Question 21: a. Nam: Long time no see! b. Nam: I exercise every morning. c. Mark: You look fit, too.</span>
+            <div class="options">
+                <label><input type="radio" name="q21" value="A"> A. c-a-b</label>
+                <label><input type="radio" name="q21" value="B"> B. b-c-a</label>
+                <label><input type="radio" name="q21" value="C"> C. c-b-a</label>
+                <label><input type="radio" name="q21" value="D"> D. a-c-b</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: D</div>
+        </div>
+
+        <div class="question" data-ans="A">
+            <span class="question-text">Question 22: Arrange: a. Why online classes? b. Try online. c. Improve English? d. Expensive. e. Flexible.</span>
+            <div class="options">
+                <label><input type="radio" name="q22" value="A"> A. c-b-a-e-d</label>
+                <label><input type="radio" name="q22" value="B"> B. c-e-d-b-a</label>
+                <label><input type="radio" name="q22" value="C"> C. d-b-a-e-c</label>
+                <label><input type="radio" name="q22" value="D"> D. d-e-a-b-c</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: A</div>
+        </div>
+
+        <div class="question" data-ans="C">
+            <span class="question-text">Question 23: a. Taylor: Other organizations? b. Promotes peace? c. Alex: WHO. d. Alex: UN? e. Alex: Exactly.</span>
+            <div class="options">
+                <label><input type="radio" name="q23" value="A"> A. b-c-a-e-d</label>
+                <label><input type="radio" name="q23" value="B"> B. d-a-b-a-c</label>
+                <label><input type="radio" name="q23" value="C"> C. d-b-e-a-c</label>
+                <label><input type="radio" name="q23" value="D"> D. a-e-b-d-c</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: C</div>
+        </div>
+
+        <div class="question" data-ans="B">
+            <span class="question-text">Question 24: a. Mai: Join talk? b. Lan: Be there. c. Lan: Love to. d. Mai: See you 8am.</span>
+            <div class="options">
+                <label><input type="radio" name="q24" value="A"> A. c-b-d-a</label>
+                <label><input type="radio" name="q24" value="B"> B. a-c-d-b</label>
+                <label><input type="radio" name="q24" value="C"> C. c-b-a-d</label>
+                <label><input type="radio" name="q24" value="D"> D. b-d-c-a</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: B</div>
+        </div>
+
+        <div class="question" data-ans="B">
+            <span class="question-text">Question 25: a. Help learn? b. Nam: App. c. Fun studying. d. Linh: Studying these days? e. Name of app?</span>
+            <div class="options">
+                <label><input type="radio" name="q25" value="A"> A. b-c-a-e-d</label>
+                <label><input type="radio" name="q25" value="B"> B. d-b-a-c-e</label>
+                <label><input type="radio" name="q25" value="C"> C. a-e-b-d-c</label>
+                <label><input type="radio" name="q25" value="D"> D. d-b-e-a-c</label>
+            </div>
+            <div class="correct-ans">Đáp án đúng: B</div>
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Nộp Bài</button>
+    </form>
+
+    <div id="result-board">
+        <h3>KẾT QUẢ CỦA EM</h3>
+        <p>Học sinh: <span id="res-name" style="font-weight: bold; color: #1a73e8;"></span></p>
+        <p>Số câu đúng: <span id="score" style="font-weight: bold;"></span> / 25</p>
+        <p>Tỉ lệ: <span id="percent"></span>%</p>
+    </div>
+</div>
+
+<script>
+    function submitQuiz() {
+        const name = document.getElementById('studentName').value;
+        if (!name) {
+            alert("Vui lòng nhập tên học sinh trước khi nộp bài!");
+            return;
+        }
+
+        let score = 0;
+        const total = 25;
+        const form = document.getElementById('quizForm');
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach((q, index) => {
+            const correctVal = q.getAttribute('data-ans');
+            
+            // Check Radio questions
+            const selected = q.querySelector('input[type="radio"]:checked');
+            if (selected) {
+                if (selected.value === correctVal) score++;
+            }
+
+            // Check Word Form questions
+            const textInput = q.querySelector('input[type="text"]');
+            if (textInput) {
+                if (textInput.value.trim().toLowerCase() === correctVal.toLowerCase()) score++;
+            }
+            
+            // Show correct answers
+            q.classList.add('show-ans');
+        });
+
+        // Display Result
+        document.getElementById('res-name').innerText = name;
+        document.getElementById('score').innerText = score;
+        document.getElementById('percent').innerText = ((score / total) * 100).toFixed(0);
+        document.getElementById('result-board').style.display = "block";
+        
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
